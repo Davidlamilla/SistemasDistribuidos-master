@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro de departamentos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='../../asset/library/node_modules/bootswatch/dist/united/bootstrap.css'>
+    
+    <!-- <script src="../../asset/library/node_modules/ajax/lib/ajax.js"></script> -->
+    <!-- Libreria de jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src='../../js/departamentos/Departamentos.js'></script>
+</head>
+
+<body>
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Registro de departamentos</h1>
+        <!-- <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+        </div>         
+        </div> -->
+    </div>
+    <form id="frm-contenedor">
+        <!--encabezado-->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Departamentos</a>
+                </div>
+            </nav>
+        </div>
+
+        <!--obtener datos-->
+        <div>
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="form-label mt-4">Código</label>
+                        <input type="hidden" id="id" name="id">
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese código">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="form-label mt-4">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre">
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label class="form-label mt-4">Estado</label>
+                    <select class="form-select" id="estado" name="estado">
+                        <option>--Seleccione--</option>
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="form-label mt-4">Id Paises</label>
+                        <input type="text" class="form-control" id="paisId" name="paisId" placeholder="Ingrese el id del pais">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!--botones-->
+        <div>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="Agregar();">Agregar</button>
+            <button type="button" class="btn btn-primary" onclick="Modificar();">Modificar</button>
+        </div>
+
+        <!--resutlado-->
+        <div>
+            <br>
+            <table class="table table-danger">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>PaisId</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="dataResult">
+                    <!-- aqui llega la información de la base de datos. -->
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
+<script>
+    loadTableDepartamentos();
+    loadTablePaises();
+</script>

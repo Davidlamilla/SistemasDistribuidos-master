@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concesionario</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="../assets/css/dashboard.css" rel="stylesheet">
+
+  <!-- asociar cerrar sesión -->
+  <script src="../js/login.js"></script>
+</head>
+
+<body>
+
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Concesionario</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" onclick="SignOut();">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Dashboard
+              </a>
+            </li>           
+          </ul>
+          
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="continentes/Continentes.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de continentes
+              </a>
+            </li> 
+          </ul>
+          
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="paises/Paises.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de paises
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="departamentos/Departamentos.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de departamentos
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="municipios/Municipios.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de municipios
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="roles/Roles.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de roles
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="personas/Personas.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de personas
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios/Usuarios.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de usuarios
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="tiposVehiculos/TiposVehiculos.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de tipos de vehiculos
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="marcas/Marcas.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de marcas
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="vehiculos/Vehiculos.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de vehiculos
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="inventarios/Inventarios.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de inventarios
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="detallesFacturas/DetallesFacturas.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de detalles de facturas
+              </a>
+            </li> 
+          </ul>
+
+          <ul class="nav flex-column mb-2">            
+            <li class="nav-item">
+              <a class="nav-link" href="facturas/Facturas.html" target="WorkSpace">
+                <span data-feather="file-text"></span>
+                Registro de facturas
+              </a>
+            </li> 
+          </ul>
+
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="100">  
+          
+        </canvas>    -->
+        <div  class="my-4 w-100">
+          <iframe src="" width="1100px" height="600px" id="WorkSpace" name="WorkSpace"></iframe>
+        </div>      
+      </main>
+    </div>
+  </div>
+</body>
+</html>
